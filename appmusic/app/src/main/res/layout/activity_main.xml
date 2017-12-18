@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/anh2"
+    tools:context="com.example.cong.myapplication.MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:text="Tên bài hát :"
+        android:textAlignment="viewStart"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+
+        android:layout_marginLeft="30dp"
+        android:background="@null"
+        app:srcCompat="@drawable/previous" />
+    <ImageButton
+        android:id="@+id/imageButtonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+       android:layout_marginLeft="50dp"
+        app:srcCompat="@drawable/play"
+        android:layout_toRightOf="@id/imageButtonPrevious"
+
+
+       />
+
+    <ImageButton
+        android:id="@+id/imageButtonStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="60dp"
+        android:layout_toRightOf="@id/imageButtonPlay"
+        android:background="@null"
+        app:srcCompat="@drawable/stop" />
+
+    <ImageButton
+        android:id="@+id/imageButtonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/imageButtonStop"
+        android:background="@null"
+        app:srcCompat="@drawable/next" />
+
+    <SeekBar
+        android:id="@+id/seekBarSong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonPrevious"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+
+        android:id="@+id/TextViewTimeSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextViewTimeTotal"
+        android:layout_alignBottom="@+id/TextViewTimeTotal"
+        android:layout_marginLeft="10dp"
+        android:layout_toStartOf="@+id/imageButtonPlay"
+        android:text="00:00"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/TextViewTimeTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarSong"
+        android:layout_alignEnd="@+id/imageButtonNext"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+
+        android:text="00:00"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageViewDisc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/TextViewTimeTotal"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/disc" />
+
+
+</RelativeLayout>
